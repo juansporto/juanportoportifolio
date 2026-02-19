@@ -1,0 +1,33 @@
+<div class="app-shell" id="inicio">
+  <header class="topbar">
+    <nav class="container nav">
+      <a class="logo" href="#home">Juan<span>Porto</span></a>
+
+      <button class="menu-btn" aria-label="Abrir menu" (click)="toggleMenu()">☰</button>
+
+      <ul class="nav-links" [class.open]="isMenuOpen">
+        <li><a href="#home" (click)="closeMenu()">Home</a></li>
+        <li><a href="#sobre" (click)="closeMenu()">Sobre</a></li>
+        <li><a href="#habilidades" (click)="closeMenu()">Habilidades</a></li>
+        <li><a href="#projetos" (click)="closeMenu()">Projetos</a></li>
+        <li><a href="#experiencia" (click)="closeMenu()">Experiência</a></li>
+        <li><a href="#contato" (click)="closeMenu()">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <app-home></app-home>
+    <app-sobre></app-sobre>
+    <app-habilidades></app-habilidades>
+    <app-projetos></app-projetos>
+    <app-experiencia></app-experiencia>
+    <app-contato></app-contato>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© {{ currentYear }} Juan Porto • Portfólio Profissional</p>
+    </div>
+  </footer>
+</div>

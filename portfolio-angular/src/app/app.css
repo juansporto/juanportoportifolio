@@ -1,0 +1,94 @@
+.app-shell {
+	position: relative;
+	z-index: 1;
+}
+
+.topbar {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	backdrop-filter: blur(9px);
+	background: linear-gradient(180deg, rgba(2, 5, 12, 0.82), rgba(2, 5, 12, 0.4));
+	border-bottom: 1px solid rgba(88, 104, 173, 0.35);
+}
+
+.nav {
+	min-height: 74px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.logo {
+	text-decoration: none;
+	font-weight: 800;
+	color: var(--text-main);
+	letter-spacing: 0.4px;
+}
+
+.logo span {
+	color: var(--cyan);
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 1.2rem;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: var(--text-soft);
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+	color: var(--text-main);
+}
+
+.menu-btn {
+	display: none;
+	border: 1px solid rgba(88, 104, 173, 0.6);
+	background: rgba(7, 11, 28, 0.65);
+	color: var(--text-main);
+	border-radius: 10px;
+	padding: 0.25rem 0.6rem;
+	font-size: 1.15rem;
+}
+
+.footer {
+	border-top: 1px solid rgba(88, 104, 173, 0.35);
+	padding: 1.2rem 0;
+	color: var(--text-soft);
+	text-align: center;
+}
+
+@media (max-width: 840px) {
+	.menu-btn {
+		display: block;
+	}
+
+	.nav-links {
+		display: none;
+		position: absolute;
+		right: 4%;
+		top: 64px;
+		min-width: 190px;
+		flex-direction: column;
+		gap: 0.6rem;
+		padding: 0.9rem;
+		border-radius: 12px;
+		border: 1px solid rgba(88, 104, 173, 0.45);
+		background: rgba(10, 14, 36, 0.95);
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+	}
+
+	.nav-links.open {
+		display: flex;
+	}
+}

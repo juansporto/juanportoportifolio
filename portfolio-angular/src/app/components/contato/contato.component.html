@@ -1,0 +1,23 @@
+<section class="section" id="contato">
+  <div class="container reveal">
+    <div class="section-title-wrap">
+      <p class="section-kicker">Contato</p>
+      <h2>Vamos conversar</h2>
+    </div>
+
+    <article class="glass-card contact-intro">
+      <h3>Solicite seu orçamento</h3>
+      <p>{{ freelanceMessage }}</p>
+    </article>
+
+    <div class="contact-grid">
+      @for (item of links; track item.label) {
+        <a class="glass-card contact-card" [href]="item.href" target="_blank" rel="noreferrer">
+          <h3><i [class]="item.iconClass"></i> {{ item.label }}</h3>
+          <p>{{ item.value }}</p>
+          <span class="contact-link"><i class="devicon-github-original"></i> Acessar</span>
+        </a>
+      }
+    </div>
+  </div>
+</section>

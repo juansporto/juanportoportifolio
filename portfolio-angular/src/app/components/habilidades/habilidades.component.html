@@ -1,0 +1,22 @@
+<section class="section" id="habilidades">
+  <div class="container reveal">
+    <div class="section-title-wrap">
+      <p class="section-kicker">Habilidades</p>
+      <h2>Tecnologias e competências técnicas</h2>
+    </div>
+
+    <div class="skills-list">
+      @for (skill of skills; track skill.name) {
+        <article class="glass-card skill-item">
+          <div class="skill-head">
+            <h3><i [class]="skill.iconClass"></i> {{ skill.name }}</h3>
+            <strong>{{ skill.level }}%</strong>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" [style.width.%]="skill.level"></div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
